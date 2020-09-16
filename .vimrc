@@ -13,6 +13,7 @@ Plug 'rhysd/vim-grammarous'
 Plug 'puremourning/vimspector'
 Plug 'morhetz/gruvbox'
 call plug#end()
+"Testing gitBare"
 
 "Leader Keys
 let mapleader = ','
