@@ -47,6 +47,9 @@ filetype plugin on
 
 command! MakeTags !ctags -R .
 
+"Sets Coc status
+set statusline^=%{coc#status()}
+
 let g:vimtex_view_method = 'zathura'
 let g:livepreview_previewer = 'zathura'
 let g:vimtex_quickfix_mode = 0

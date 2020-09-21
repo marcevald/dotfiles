@@ -7,6 +7,10 @@ set $mod Mod4
 #Start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+#Make screen setup on stationary pc
+exec --no-startup-id $HOME/.bin/startScreenLayout.sh
+
+
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 
