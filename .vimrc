@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'rhysd/vim-grammarous'
 Plug 'puremourning/vimspector'
 Plug 'morhetz/gruvbox'
+Plug 'xuqix/h2cppx'
 call plug#end()
 
 "Leader Keys
@@ -267,3 +268,11 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+"h2cppx plugin specifics
+let g:h2cppx_python_path = '/usr/bin/python'
+nmap <F3>  :H2cppx<ESC>
+nmap <F4>  :H2cppxLine<ESC>
+nmap <F3>p :CpH2cppx<ESC>
+nmap <F4>p :CpH2cppxLine<ESC>
+nmap <F5>  :H2cppxAuto<ESC>
