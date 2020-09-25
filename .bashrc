@@ -140,7 +140,7 @@ ex ()
 export RW_ROOT=~/RobWork/RobWork/
 export RWS_ROOT=~/RobWork/RobWorkStudio/
 
-alias zybomount='sshfs root@192.168.101.2:/root/code /home/marc/Nextcloud/7SEM/Embeddded/zybomount/'
+alias zybomount='sudo sshfs root@192.168.101.2:/root/code /home/marc/Nextcloud/7SEM/Embeddded/zybomount/'
 
 zat()
 {
