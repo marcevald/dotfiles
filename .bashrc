@@ -149,3 +149,11 @@ sleep 1 && exit
 }
 
 alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias date='date +"%d-%b-%Y"' 
+
+# Register weightloss in terminal
+we()
+{
+    echo $(date),$1 >> ~/Nextcloud/weight.csv
+    python3 ~/Nextcloud/weight.py
+}
