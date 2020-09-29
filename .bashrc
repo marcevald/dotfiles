@@ -148,12 +148,14 @@ zathura "$1" &
 sleep 1 && exit
 }
 
+weight() {
+    echo $(date),$1 >> ~/Nextcloud/weight.csv
+    python3 ~/Nextcloud/weight.py
+}
+
+
 alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias date='date +"%d-%b-%Y"' 
 
 # Register weightloss in terminal
-we()
-{
-    echo $(date),$1 >> ~/Nextcloud/weight.csv
-    python3 ~/Nextcloud/weight.py
-}
+alias we='python3 $HOME/Nextcloud/weight.py'
