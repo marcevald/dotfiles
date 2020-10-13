@@ -1,23 +1,20 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 "Plug 'Valloric/YouCompleteMe'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vhdirk/vim-cmake'
 Plug 'scrooloose/nerdtree'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'pboettch/vim-cmake-syntax'
 Plug 'vim-airline/vim-airline'
-Plug 'rhysd/vim-grammarous'
-Plug 'puremourning/vimspector'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
 "Leader Keys
 let mapleader = ','
 let maplocalleader= "-"
-
 syntax on
 set number
 set relativenumber
@@ -31,8 +28,8 @@ set shiftwidth=4
 set expandtab
 set splitright
 
-set path+=**
-set wildmenu
+set nobackup
+set noswapfile
 
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -78,9 +75,6 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
-
-
-
 
 " Set UltiSnip Directory
 let g:UltiSnipsSnippetDirectories = ["UltiSnips","myUltiSnips"]
@@ -276,4 +270,3 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
