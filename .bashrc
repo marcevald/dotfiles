@@ -159,3 +159,5 @@ alias date='date +"%d-%b-%Y"'
 
 # Register weightloss in terminal
 alias we='python3 $HOME/Nextcloud/weight.py'
+
+alias vim='nvim'
