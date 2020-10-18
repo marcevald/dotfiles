@@ -10,6 +10,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'pboettch/vim-cmake-syntax'
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
 
 "Leader Keys
@@ -37,6 +38,14 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+
+"Vertical resize
+nnoremap <silent> <Leader>+ :vertical resize +5 <CR>
+nnoremap <silent> <Leader>- :vertical resize -5 <CR>
+
+set path
+set path+=**
+
 
 filetype on
 filetype indent on
@@ -270,3 +279,5 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+nmap <leader>h :CocCommand clangd.switchSourceHeader<CR> 
