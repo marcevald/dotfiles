@@ -159,3 +159,5 @@ alias date='date +"%d-%b-%Y"'
 
 # Register weightloss in terminal
 alias we='python3 $HOME/Nextcloud/weight.py'
+
+export PATH=$PATH:~/usr/lib/ruby/gems/2.7.0/gems
