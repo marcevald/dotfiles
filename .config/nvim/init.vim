@@ -1,23 +1,21 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 "Plug 'Valloric/YouCompleteMe'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vhdirk/vim-cmake'
 Plug 'scrooloose/nerdtree'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'pboettch/vim-cmake-syntax'
 Plug 'vim-airline/vim-airline'
-Plug 'rhysd/vim-grammarous'
-Plug 'puremourning/vimspector'
 Plug 'morhetz/gruvbox'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
 
 "Leader Keys
 let mapleader = ','
 let maplocalleader= "-"
-
 syntax on
 set number
 set relativenumber
@@ -31,8 +29,8 @@ set shiftwidth=4
 set expandtab
 set splitright
 
-set path+=**
-set wildmenu
+set nobackup
+set noswapfile
 
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -40,6 +38,14 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+
+"Vertical resize
+nnoremap <silent> <Leader>+ :vertical resize +5 <CR>
+nnoremap <silent> <Leader>- :vertical resize -5 <CR>
+
+set path
+set path+=**
+
 
 filetype on
 filetype indent on
@@ -78,9 +84,6 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
-
-
-
 
 " Set UltiSnip Directory
 let g:UltiSnipsSnippetDirectories = ["UltiSnips","myUltiSnips"]
@@ -277,3 +280,4 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+nmap <leader>h :CocCommand clangd.switchSourceHeader<CR> 

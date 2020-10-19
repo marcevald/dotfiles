@@ -161,3 +161,4 @@ alias date='date +"%d-%b-%Y"'
 alias we='python3 $HOME/Nextcloud/weight.py'
 
 export PATH=$PATH:~/usr/lib/ruby/gems/2.7.0/gems
+alias vim='nvim'
