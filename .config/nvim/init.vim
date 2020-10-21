@@ -13,6 +13,10 @@ Plug 'morhetz/gruvbox'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
 
+if has('mouse')
+    set mouse=a
+endif
+
 "Leader Keys
 let mapleader = ','
 let maplocalleader= "-"
