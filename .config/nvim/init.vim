@@ -27,6 +27,9 @@ set relativenumber
 colorscheme gruvbox
 set background=dark
 
+"Set no backround. Setting it transparent
+hi Normal guibg=NONE ctermbg=NONE
+
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
