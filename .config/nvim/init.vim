@@ -35,6 +35,8 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set splitright
+set splitbelow
+
 
 set nobackup
 set noswapfile
@@ -288,3 +290,4 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 nmap <leader>h :CocCommand clangd.switchSourceHeader<CR> 
+
