@@ -162,3 +162,6 @@ alias we='python3 $HOME/Nextcloud/weight.py'
 
 export PATH=$PATH:~/usr/lib/ruby/gems/2.7.0/gems
 alias vim='nvim'
+
+alias rovi='make -f /home/marc/roviDocker/Makefile'
+

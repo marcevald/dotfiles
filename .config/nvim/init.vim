@@ -99,7 +99,7 @@ let g:UltiSnipsSnippetDirectories = ["UltiSnips","myUltiSnips"]
 let g:UltiSnipsSnippetsDir = "~/.vim/myUltiSnips"
 let g:UltiSnipsEditSplit = "horizontal"
 let g:UltiSnipsExpandTrigger='<Leader><Leader>'
-let g:UltiSnipsListSnippets='<c-tab>'
+"let g:UltiSnipsListSnippets='<c-tab>'
 let g:UltiSnipsJumpForwardTrigger='<c-j>'
 let g:UaptiSnipsJumpBackwardTrigger='<c-k>'
 
