@@ -5,7 +5,7 @@ zero=" 0%"
 
 if [[ $battery == $zero ]]; 
     then 
-        echo "   "
+        echo " "
     else
-        echo "  " $battery
+        echo " " $battery
 fi
