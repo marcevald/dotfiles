@@ -128,10 +128,10 @@ font-1 = "UbuntuMono Nerd Font:size=16;3"
 
 modules-left = i3 spotify1 volume 
 modules-center = xwindow
-modules-right = backlight arrow1 networkspeedup networkspeeddown arrow2 memory2 arrow3 cpu2 arrow4 battery date wireless-network
+modules-right = backlight arrow6 headset arrow1 networkspeedup networkspeeddown arrow2 memory2 arrow3 cpu2 arrow4 battery date wireless-network
 
 separator = 
-wireless-network
+;wireless-network
 ;dim-value = 1.0
 
 tray-position = right
@@ -156,7 +156,7 @@ enable-ipc = true
 click-left =
 click-middle =
 click-right =
-scroll-up = i3wm-wsnext
+scroll-up = i3wm-wsnxt
 scroll-down = i3wm-wsprev
 double-click-left =
 double-click-middle =
@@ -176,6 +176,7 @@ cursor-scroll =
 ############                       MODULE I3                        ############
 ################################################################################
 ################################################################################
+
 
 [module/i3]
 ;https://github.com/jaagr/polybar/wiki/Module:-i3
@@ -304,7 +305,9 @@ type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
 content-foreground = #C3E88D
-content-background = #292d3e
+content-background = #F07178 
+
+;#292d3e
 
 [module/arrow2]
 ; grey to Blue
@@ -343,11 +346,8 @@ content-background = #FFE585
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #1D2330 
-content-background = #F07178
-
-
-
+content-foreground = #F07178 
+content-background = ${colors.background}
 
 ################################################################################
 ###############################################################################
@@ -355,15 +355,15 @@ content-background = #F07178
 ################################################################################
 ################################################################################
 
-#[module/arch-aur-updates]
-#type = custom/script
-#exec = ~/.config/polybar/scripts/check-all-#updates.sh
-#interval = 1000
-#label = Updates: %output%
-#format-foreground = #ffffff
-#format-background = #F07178
-#format-prefix = "  "
-#format-prefix-foreground = #ffffff
+[module/headset]
+type = custom/script
+exec = ~/.config/polybar/scripts/headsetBattery.sh
+interval = 5
+label = %output%
+format-foreground = ${colors.background}
+format-background = #F07178
+#format-prefix = "  "
+format-prefix-foreground = ${colors.background}
 
 
 #[module/aur-updates]
@@ -1044,19 +1044,6 @@ format-muted-prefix-foreground = "#ff0000"
 format-muted-foreground = ${colors.foreground}
 format-muted-background = ${colors.background}
 
-################################################################################
-
-[module/weather]
-type = custom/script
-interval = 10
-format = <labewireless-networkl>
-format-prefix wireless-network= " "
-format-prefix-wireless-networkforeground = #3EC13F
-format-underline = #3EC13F
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-exec = python -u ~/.config/polybar/scripts/weather.py
-tail = true
 
 #################################################################################
 
@@ -1089,46 +1076,6 @@ format-connected-prefix-background = ${colors.background}
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${colors.alert}
 label-disconnected-foreground = ${colors.foreground}
-
-################################################################################
-
-[module/wireless-network]
-;https://github.com/jaagr/polybar/wiki/Module:-network
-type = internal/network
-interface = ${env:WIRELESS}
-interval = 3.0
-label-connected = %essid%
-
-format-connected = <label-connected>
-;format-connected = <ramp-signal> <label-connected>
-format-connected-foreground = ${colors.foreground}
-format-connected-background = ${colors.background}
-format-connected-prefix = "  "
-format-connected-prefix-foreground = #7e52c6
-format-connected-prefix-background = ${colors.background}
-format-connected-underline = #7e52c6
-
-label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.alert}
-label-disconnected-background = ${colors.background}
-
-format-disconnected = <label-disconnected>
-format-disconnected-foreground = ${colors.alert}
-format-disconnected-background = ${colors.background}
-format-disconnected-prefix = "  "
-format-disconnected-prefix-foreground = ${colors.alert}
-format-disconnected-prefix-background = ${colors.background}
-format-disconnected-underline =${colors.alert}
-
-ramp-signal-0 = ▁
-ramp-signal-1 = ▂
-ramp-signal-2 = ▃
-ramp-signal-3 = ▄
-ramp-signal-4 = ▅
-ramp-signal-5 = ▆
-ramp-signal-6 = ▇
-ramp-signal-7 = █
-ramp-signal-foreground = #7e52c6
 
 ################################################################################
 
@@ -1193,4 +1140,4 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 ###############################################################################
-# vim:ft=dosini
+# vim:ft=dosinie
