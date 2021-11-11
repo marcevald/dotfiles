@@ -54,8 +54,8 @@ bindsym XF86Calculator exec gnome-calculator
 #exec --no-startup-id volumeicon
 #bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 exec --no-startup-id start-pulseaudio-x11
-exec --no-startup-id pa-applet
-bindsym $mod+Ctrl+m exec pavucontrol
+exec --no-startup-id pasystray
+exec --no-startup-id nm-applet
 
 ################################################################################################
 
